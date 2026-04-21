@@ -34,6 +34,10 @@ app.post("/notifications", (req: Request, res: Response) => {
   res.status(200).json({ received: true });
 });
 
+app.get("/ping", (_, res: Response) => {
+  res.json({ message: "ok" });
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
